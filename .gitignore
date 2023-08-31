@@ -1,0 +1,10 @@
+*.zip
+shapefiles/*
+.ipynb_checkpoints/*
+Data/*
+gridded-population/*
+Settlement_Localities_2020_shp/*
+tiles_*
+__pycache__/*
+*.npy
+*.html
