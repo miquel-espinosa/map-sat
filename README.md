@@ -1,4 +1,4 @@
-# ControlEarth
+# Generate Your Own Scotland
 Code corresponding to the paper: [Generate Your Own Scotland: Satellite Image Generation Conditioned on Maps](https://arxiv.org/). 
 
 > We show that state-of-the-art pretrained diffusion models can be conditioned on cartographic data to generate realistic satellite images. We train the ControlNet model and qualitatively evaluate the results, demonstrating that both image quality and map fidelity are possible.
@@ -56,7 +56,7 @@ The image below shows some paired samples from the different datasets as downloa
   <img src="imgs/datasets.png" width=50% height=50%>
 </p>
 
-## ControlEarth training
+## Model training
 We train a ControlNet model with the built dataset using the code provided by the [diffusers library](https://github.com/huggingface/diffusers/tree/main/examples/controlnet). It is recommended to compile the dataset as a [huggingface dataset](https://huggingface.co/docs/datasets/index).
 
 ## Model weights
