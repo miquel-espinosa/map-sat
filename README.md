@@ -1,5 +1,5 @@
 # Generate Your Own Scotland
-Code corresponding to the paper: [Generate Your Own Scotland: Satellite Image Generation Conditioned on Maps](https://arxiv.org/). 
+Code corresponding to the paper: [Generate Your Own Scotland: Satellite Image Generation Conditioned on Maps](https://arxiv.org/abs/2308.16648). 
 
 > We show that state-of-the-art pretrained diffusion models can be conditioned on cartographic data to generate realistic satellite images. We train the ControlNet model and qualitatively evaluate the results, demonstrating that both image quality and map fidelity are possible.
 
@@ -64,3 +64,15 @@ We train a ControlNet model with the built dataset using the code provided by th
 The best performing model, trained on the Central Belt dataset, is publicly available at https://huggingface.co/mespinosami/controlearth.
 
 We also publish the model trained on Mainland Scotland at https://huggingface.co/mespinosami/controlearth-sct for comparative purposes.
+
+## Citation
+If you find this work helpful please consider citing
+```
+@unpublished{espinosa_2023_8_mapsat,
+  	author = {Miguel Espinosa and Elliot J. Crowley},
+  	title = {Generate Your Own Scotland: Satellite Image Generation Conditioned on Maps},
+  	year = {2023},
+  	month = {Aug},
+  	institution = {University of Edinburgh},
+  	url = {https://arxiv.org/abs/2308.16648},
+}
