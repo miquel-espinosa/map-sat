@@ -7,6 +7,9 @@ Paper: [Generate Your Own Scotland: Satellite Image Generation Conditioned on Ma
 ![examples image](imgs/examples.png)
 The above image shows the results of our model. The first column shows the input map, the second column shows the real satellite image, and the rest show the generated satellite images with diffusion models (ControlNet) when conditioned on the OSM map.
 
+![examples image](imgs/neurips-historical-maps.png)
+We also present the results obtained when generating satellite images that follow the layout of historical maps from 1888. The first column shows the input historical map (1888), the second column shows the real satellite image (2017), and the rest show the generated satellite images with diffusion models (ControlNet) when conditioned on the historical map.
+
 ## Installation
 Create a conda environment and install the dependencies
 ```
