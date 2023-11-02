@@ -1,7 +1,10 @@
 # Generate Your Own Scotland
+🗺️ -> 🛰️ 🏞️ _Satellite Image Image Generation Conditioned on Maps_
+
 **UPDATE: 🎉 Our paper has been accepted at [NeurIPS 2023 Workshop on Diffusion Models](https://diffusionworkshop.github.io/)!!!**
 
-Paper: [Generate Your Own Scotland: Satellite Image Generation Conditioned on Maps](https://arxiv.org/abs/2308.16648). 
+[Paper (arxiv)](https://arxiv.org/abs/2308.16648)  -  [NeurIPS Workshop (extension)](imgs/NeurIPS_Workshop_23_Diffusion_Models.pdf)
+
 > We show that state-of-the-art pretrained diffusion models can be conditioned on cartographic data to generate realistic satellite images. We train the ControlNet model and qualitatively evaluate the results, demonstrating that both image quality and map fidelity are possible.
 
 ![examples image](imgs/examples.png)
