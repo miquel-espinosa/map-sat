@@ -1,17 +1,21 @@
 # Generate Your Own Scotland
-🗺️ -> 🛰️ 🏞️ _Satellite Image Image Generation Conditioned on Maps_
 
 **UPDATE: 🎉 Our paper has been accepted at [NeurIPS 2023 Workshop on Diffusion Models](https://diffusionworkshop.github.io/)!!!**
 
-[Paper (arxiv)](https://arxiv.org/abs/2308.16648)  -  [NeurIPS Workshop (extension)](imgs/NeurIPS_Workshop_23_Diffusion_Models.pdf)
+- [Arxiv Paper](https://arxiv.org/abs/2308.16648)
+- [NeurIPS Workshop Paper (extension)](imgs/NeurIPS_Workshop_23_Diffusion_Models.pdf)
 
-> We show that state-of-the-art pretrained diffusion models can be conditioned on cartographic data to generate realistic satellite images. We train the ControlNet model and qualitatively evaluate the results, demonstrating that both image quality and map fidelity are possible.
+## _Satellite Image Image Generation Conditioned on Maps_ 🗺️ -> 🛰️ 🏞️
+
+> _We show that state-of-the-art pretrained diffusion models can be conditioned on cartographic data to generate realistic satellite images. We train the ControlNet model and qualitatively evaluate the results, demonstrating that both image quality and map fidelity are possible._
+
+Below are the results of our model. The first column shows the input map, the second column shows the real satellite image, and the rest show the generated satellite images with diffusion models (ControlNet) when conditioned on the OSM map.
 
 ![examples image](imgs/examples.png)
-The above image shows the results of our model. The first column shows the input map, the second column shows the real satellite image, and the rest show the generated satellite images with diffusion models (ControlNet) when conditioned on the OSM map.
+
+We also present the results obtained when generating satellite images that follow the layout of historical maps from 1888. The first column shows the input historical map (1888), the second column shows the real satellite image (2017), and the rest show the generated satellite images with diffusion models (ControlNet) when conditioned on the historical map.
 
 ![examples image](imgs/neurips-historical-maps.png)
-We also present the results obtained when generating satellite images that follow the layout of historical maps from 1888. The first column shows the input historical map (1888), the second column shows the real satellite image (2017), and the rest show the generated satellite images with diffusion models (ControlNet) when conditioned on the historical map.
 
 ## Installation
 Create a conda environment and install the dependencies
@@ -75,11 +79,12 @@ We also publish the model trained on Mainland Scotland at https://huggingface.co
 ## Citation
 If you find this work helpful please consider citing
 ```
-@unpublished{espinosa_2023_8_mapsat,
+@article{espinosa_2023_8_mapsat,
   	author = {Miguel Espinosa and Elliot J. Crowley},
   	title = {Generate Your Own Scotland: Satellite Image Generation Conditioned on Maps},
   	year = {2023},
   	month = {Aug},
+  	journal = {NeurIPS 2023 Workshop on Diffusion Models},
   	institution = {University of Edinburgh},
   	url = {https://arxiv.org/abs/2308.16648},
 }
