@@ -82,9 +82,9 @@ We also publish the model trained on Mainland Scotland at https://huggingface.co
 1. Download an OSM image of your liking. E.g: two images from Edinburgh city (OSM map at zoom=17)
 ```
 wget https://datasets-server.huggingface.co/assets/mespinosami/map2sat-edi5k20-samples/--/default/train/11/input_image/image.png -O image1.png
-wget image2.png https://datasets-server.huggingface.co/assets/mespinosami/map2sat-edi5k20-samples/--/default/train/1/input_image/image.png -O image2.png
+wget https://datasets-server.huggingface.co/assets/mespinosami/map2sat-edi5k20-samples/--/default/train/1/input_image/image.png -O image2.png
 ```
-2. Generate
+2. Generate multiple images for each OSM tile:
 ```
 from diffusers import StableDiffusionControlNetPipeline, ControlNetModel, UniPCMultistepScheduler
 from PIL import Image
