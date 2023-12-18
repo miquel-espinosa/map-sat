@@ -76,6 +76,41 @@ The best performing model, trained on the Central Belt dataset, is publicly avai
 
 We also publish the model trained on Mainland Scotland at https://huggingface.co/mespinosami/controlearth-sct for comparative purposes.
 
+## Using the model
+(Note that the model was trained on OSM tiles at zoom level 17, so make sure that the zoom level you are using is the same.)
+
+1. Download an OSM image of your liking. E.g: two images from Edinburgh city (OSM map at zoom=17)
+```
+wget https://datasets-server.huggingface.co/assets/mespinosami/map2sat-edi5k20-samples/--/default/train/11/input_image/image.png -O image1.png
+wget image2.png https://datasets-server.huggingface.co/assets/mespinosami/map2sat-edi5k20-samples/--/default/train/1/input_image/image.png -O image2.png
+```
+2. Generate
+```
+from diffusers import StableDiffusionControlNetPipeline, ControlNetModel, UniPCMultistepScheduler
+from PIL import Image
+import torch
+controlnet = ControlNetModel.from_pretrained("mespinosami/controlearth", torch_dtype=torch.float16)
+pipe = StableDiffusionControlNetPipeline.from_pretrained(
+        "runwayml/stable-diffusion-v1-5", controlnet=controlnet, torch_dtype=torch.float16,
+        safety_checker = None, requires_safety_checker = False
+    )
+    
+pipe.scheduler = UniPCMultistepScheduler.from_config(pipe.scheduler.config)
+pipe.enable_model_cpu_offload()
+
+control_image_1 = Image.open('./image1.png').convert("RGB")
+control_image_2 = Image.open('./image2.png').convert("RGB")
+prompt = "convert this openstreetmap into its satellite view"
+
+num_images = 5
+for i in range(num_images):
+    image = pipe(prompt, num_inference_steps=50, image=control_image_1).images[0].save(f'img1-generated-{i}.png')
+for i in range(num_images):
+    image = pipe(prompt, num_inference_steps=50, image=control_image_2).images[0].save(f'img2-generated-{i}.png')
+```
+3. Images generated will look similar to these:
+![example-github-1](https://github.com/miquel-espinosa/map-sat/assets/34089118/455a1e29-f92f-49dc-93c2-b27a9fe524aa)
+
 ## Citation
 If you find this work helpful please consider citing
 ```
