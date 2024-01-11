@@ -85,7 +85,7 @@ wget https://datasets-server.huggingface.co/assets/mespinosami/map2sat-edi5k20-s
 wget https://datasets-server.huggingface.co/assets/mespinosami/map2sat-edi5k20-samples/--/default/train/1/input_image/image.png -O image2.png
 ```
 2. Generate multiple images for each OSM tile:
-```
+```python
 from diffusers import StableDiffusionControlNetPipeline, ControlNetModel, UniPCMultistepScheduler
 from PIL import Image
 import torch
