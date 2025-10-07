@@ -3,7 +3,7 @@
 **UPDATE: 🎉 Our paper has been accepted at [NeurIPS 2023 Workshop on Diffusion Models](https://diffusionworkshop.github.io/)!!!**
 
 - [Arxiv Paper](https://arxiv.org/abs/2308.16648)
-- [NeurIPS Workshop Paper (extension)](http://nbviewer.jupyter.org/github/miquel-espinosa/map-sat/blob/main/imgs/NeurIPS_Workshop_23_Diffusion_Models.pdf)
+- [NeurIPS Workshop Paper (extension)](https://github.com/miquel-espinosa/map-sat/blob/main/imgs/NeurIPS_Workshop_23_Diffusion_Models.pdf)
 
 ## _Satellite Image Image Generation Conditioned on Maps_ 🗺️ -> 🛰️ 🏞️
 
